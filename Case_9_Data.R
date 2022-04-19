@@ -65,3 +65,13 @@ Case9Data$monthfrstordBins <- ifelse(Case9Data$monthfrstord %in% NA, 6,
                                                ifelse(Case9Data$monthfrstord > 12 & Case9Data$monthfrstord <= 18, 3, 
                                                       ifelse(Case9Data$monthfrstord>18 &Case9Data$monthfrstord <= 24, 4, 5)))))
 
+Case9Data$monthlastordBin <- ifelse(Case9Data$monthlastord %in% NA, 6, 
+                               ifelse(Case9Data$monthlastord <= 6, 1, 
+                                      ifelse(Case9Data$monthlastord <= 12, 2, 
+                                             ifelse(Case9Data$monthlastord <= 18, 3, 
+                                                    ifelse(Case9Data$monthlastord <= 24, 4, 
+                                                           ifelse(Case9Data$monthlastord <= 30, 5, 
+                                                                  Case9Data$monthlastord))))))
+
+
+
