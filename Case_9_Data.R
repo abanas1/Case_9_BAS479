@@ -58,3 +58,10 @@ Case9Data$LastMailBins <- ifelse(Case9Data$LastMail %in% NA, 6,
                                         ifelse(Case9Data$LastMail >6 & Case9Data$LastMail<= 12, 2, 
                                                ifelse(Case9Data$LastMail > 12 & Case9Data$LastMail <= 18, 3, 
                                                       ifelse(Case9Data$LastMail>18 &Case9Data$LastMail <= 24, 4, 5)))))
+
+Case9Data$monthfrstordBins <- ifelse(Case9Data$monthfrstord %in% NA, 6, 
+                                 ifelse(Case9Data$monthfrstord <= 6, 1, 
+                                        ifelse(Case9Data$monthfrstord >6 & Case9Data$monthfrstord<= 12, 2, 
+                                               ifelse(Case9Data$monthfrstord > 12 & Case9Data$monthfrstord <= 18, 3, 
+                                                      ifelse(Case9Data$monthfrstord>18 &Case9Data$monthfrstord <= 24, 4, 5)))))
+
