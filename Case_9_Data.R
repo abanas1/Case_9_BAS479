@@ -40,3 +40,21 @@ continuous <- Case9Data[, c("Age", "Age1", "Age2", "Age3", "canorders", "Code1",
 cc <- continuous[complete.cases(continuous),]
 #Creating correlation plot to determine worst multi-collinearity
 corrplot(cor(cc), type = 'lower')
+
+
+
+
+
+
+
+
+##########################################################
+#    MILESTONE 3
+##########################################################
+
+#binning variables
+Case9Data$LastMailBins <- ifelse(Case9Data$LastMail %in% NA, 6, 
+                                 ifelse(Case9Data$LastMail <= 6, 1, 
+                                        ifelse(Case9Data$LastMail >6 & Case9Data$LastMail<= 12, 2, 
+                                               ifelse(Case9Data$LastMail > 12 & Case9Data$LastMail <= 18, 3, 
+                                                      ifelse(Case9Data$LastMail>18 &Case9Data$LastMail <= 24, 4, 5)))))
