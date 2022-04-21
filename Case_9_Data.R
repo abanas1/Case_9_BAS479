@@ -74,6 +74,9 @@ Case9Data$monthlastordBin <- ifelse(Case9Data$monthlastord %in% NA, 6,
                                                                   Case9Data$monthlastord))))))
 
 
+##########################################
+#ALL CODE FOR MILESTONE 3
+##########################################
 Case9Data <- read.csv("9.13 C9 Random Sample v1.92.csv", stringsAsFactors = TRUE)
 
 Case9Data$WebUseBin <- ifelse(Case9Data$WebUse %in% NA, 0, ifelse(Case9Data$WebUse == 0, 0, 1))
@@ -113,10 +116,6 @@ cc <- continuous[complete.cases(continuous),]
 corrplot(cor(cc), type = 'lower')
 
 
-##########################################################
-#    MILESTONE 3
-##########################################################
-
 #binning variables
 Case9Data$LastMailBins <- ifelse(Case9Data$LastMail %in% NA, 6, 
                                  ifelse(Case9Data$LastMail <= 6, 1, 
@@ -138,9 +137,7 @@ Case9Data$monthlastordBin <- ifelse(Case9Data$monthlastord %in% NA, 6,
                                                                 ifelse(Case9Data$monthlastord <= 30, 5, 
                                                                        Case9Data$monthlastord))))))
 
-##########################################
-#ALL CODE FOR MILESTONE 3
-##########################################
+
 
 #Case9Data <- read.csv("Case9DataBinnedV2.csv", stringsAsFactors = TRUE)
 
